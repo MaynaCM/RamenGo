@@ -2,7 +2,7 @@
 
 
 /* Style-Guide :) */
-/* 0- Root */
+/* 0- Root variables and root elements adjustments */
 /* 1-Fonts */
 /* 2-Colors classes */
 /* 3-Components and style classes */
@@ -16,7 +16,7 @@
 /* 4.3-responsiveness desktop classes */
 
 
-/* 0- Root */
+/* 0- Root variables and root elements adjustments */
 :root {
     --color-preto: #000000;
     --color-azul: #1820EF;
@@ -24,6 +24,19 @@
     --color-amarelo: #FFC024;
     --cor-white: #FAFAED;
 }
+
+body {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+p{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
 
 /* 1-Fonts */
 .font-black {
@@ -71,19 +84,89 @@
 
 
 /* 3-Components and style classes */
-/* 3.2-Widgets classes */
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+/* 3.1-DIV classes */
+.main{
     display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
 }
 
-p{
-    margin-block-start: 0em;
-    margin-block-end: 0em;
+.content-div{
+    background-color: var(--cor-white);
 }
 
+.broth-section{
+    text-align: center;
+}
+/* 3.2-Widgets classes */
+
+
+#broth-title {
+    color: var(--color-azul);
+}
+
+#broth-description {
+    color: #000000;
+    font-size: 14px;
+}
+
+#broth-price {
+    color: var(--color-vermelho);
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.carousel {
+    width: 100%; 
+    overflow: hidden; 
+    position: relative;
+    transition: transform 0.3s ease-in-out
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.slide-out {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center; 
+}
+
+.slide {
+    width: 65%; 
+    text-align: center; 
+    padding: 1rem; 
+    box-shadow: 0px 4px 12px 0px #E0DBBF99;
+    border-radius: 10px;
+}
+
+.indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem; 
+    transition: transform 0.3s ease-in-out
+}
+
+.indicator {
+    cursor: pointer;
+    margin: 0 0.5rem; 
+    width: 10px;
+    height: 10px;
+    border-radius: 8px;
+    background-color: #E0DBBF;
+}
+
+.indicator.active {
+    background-color: var(--color-vermelho);
+    width: 36px;
+    height: 12px; 
+}
+
+.slide-out.active > .slide{
+    background-color: #1820EF;
+}
 
 /* 3.4-Style classes (especific borders, positions or animations) */
 
@@ -96,28 +179,32 @@ p{
         flex-direction: column;
         align-items: center;
         padding: 4%;
-        flex: 1;
-    }
+}
 
     .GO-text{
         font-size: 100px;
-        color: var(--cor-white);
-    }
+        color: white;
+}
 
     .cover-text{
         text-align: center;
         font-size: 16px;
-        color: var(--cor-white);
-    }
+        color: white;
+        padding-bottom: 2%;
+}
+
     .pattern-bg {
-        width: 100%;
-        height: auto; /* altura de toda a viewport */
+        height: auto; 
         background-image: url('./assets/pattern-vermelha.png');
         background-repeat: repeat;
         background-size: 300px 300px;
-    }
+}
 
     .cover-mobile{
         width: 70%;
-    }
+}
+
+    .carousel-img{
+        width: 30%;
+}
 }
