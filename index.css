@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap');
+
+
+/* Style-Guide :) */
+/* 0- Root */
+/* 1-Fonts */
+/* 2-Colors classes */
+/* 3-Components and style classes */
+/* 3.1-DIV classes */
+/* 3.2-Widgets classes */
+/* 3.3-buttons classes */
+/* 3.4-Style classes (especific borders, positions or animations) */
+/* 4-responsiveness classes */
+/* 4.1-responsiveness mobile classes */
+/* 4.2-responsiveness tablet classes */
+/* 4.3-responsiveness desktop classes */
+
+
+/* 0- Root */
+:root {
+    --color-preto: #000000;
+    --color-azul: #1820EF;
+    --color-vermelho: #FF4E42;
+    --color-amarelo: #FFC024;
+    --cor-white: #FAFAED;
+}
+
+/* 1-Fonts */
+.font-black {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.font-extrabold {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.font-bold {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.font-medium {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.font-regular {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-light {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.font-thin {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+
+/* 3-Components and style classes */
+/* 3.2-Widgets classes */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    display: flex;
+}
+
+p{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+
+/* 3.4-Style classes (especific borders, positions or animations) */
+
+
+/* 4-responsiveness classes */
+/* 4.1-responsiveness mobile classes */
+@media (min-width: 320px) and (max-width: 767px) { 
+    .cover{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 4%;
+        flex: 1;
+    }
+
+    .GO-text{
+        font-size: 100px;
+        color: var(--cor-white);
+    }
+
+    .cover-text{
+        text-align: center;
+        font-size: 16px;
+        color: var(--cor-white);
+    }
+    .pattern-bg {
+        width: 100%;
+        height: auto; /* altura de toda a viewport */
+        background-image: url('./assets/pattern-vermelha.png');
+        background-repeat: repeat;
+        background-size: 300px 300px;
+    }
+
+    .cover-mobile{
+        width: 70%;
+    }
+}
