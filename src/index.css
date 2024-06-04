@@ -8,7 +8,9 @@
 /* 3-Components and style classes */
 /* 3.1-DIV classes */
 /* 3.2-Widgets classes */
-/* 3.2.1-Protein carousel classes */
+/* 3.2.1-desktop widgets classes */
+/* 3.2.2-broth carousel classes */
+/* 3.2.3-Protein carousel classes */
 /* 3.3-buttons classes */
 /* 3.4-Style classes (especific borders, positions or animations) */
 /* 4-responsiveness classes */
@@ -123,6 +125,43 @@ p{
 }
 
 /* 3.2-Widgets classes */
+/* 3.2.1 - desktop Widgets classes */
+.broth-cards {
+    display: flex;
+    flex-direction: row;
+    margin-top: 4%;
+}
+
+.broth-card-out {
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+}
+
+.broth-card {
+    width: 65%; 
+    text-align: center; 
+    padding: 1rem; 
+    box-shadow: 0px 4px 12px 0px #E0DBBF99;
+    border-radius: 10px;
+}
+
+.broth-card.active{
+    background-color: #1820EF;
+}
+
+.broth-card.active > #broth-title{
+    color: white;
+}
+
+.broth-card.active > #broth-description{
+    color: white;
+}
+
+.broth-card.active > #broth-price{
+    color: var(--color-yellow);
+}
+
 #broth-title {
     color: var(--color-blue);
     font-weight: 900;
@@ -140,6 +179,61 @@ p{
     margin-top: 2em;
 }
 
+.protein-cards {
+    display: flex;
+    flex-direction: row;
+    margin-top: 4%;
+}
+
+.protein-card-out {
+    display: flex;
+    width: 100%;
+    justify-content: center; 
+}
+
+.protein-card {
+    width: 65%; 
+    text-align: center; 
+    padding: 1rem; 
+    box-shadow: 0px 4px 12px 0px #E0DBBF99;
+    border-radius: 10px;
+}
+
+.protein-card.active{
+    background-color: #1820EF;
+}
+
+.protein-card.active > #protein-title{
+    color: white;
+}
+
+.protein-card.active > #protein-description{
+    color: white;
+}
+
+.protein-card.active > #protein-price{
+    color: var(--color-yellow);
+}
+
+#protein-title {
+    color: var(--color-blue);
+    font-weight: 900;
+}
+
+#protein-description {
+    color: #000000;
+    font-size: 14px;
+}
+
+#protein-price {
+    color: var(--color-red);
+    font-weight: 900;
+    font-size: 20px;
+    margin-top: 2em;
+}
+
+
+/* 3.2.2-broth carousel classes */
 .carousel {
     width: 100%; 
     margin-top: 5%;
@@ -205,7 +299,7 @@ p{
     color: var(--color-yellow);
 }
 
-/* 3.2.1-Protein carousel classes */
+/* 3.2.3-Protein carousel classes */
 #protein-title {
     color: var(--color-blue);
     font-weight: 900;
@@ -336,11 +430,12 @@ p{
     font-weight: 900;
     font-size: 24px;
 }
-
 /* 4-responsiveness classes */
 /* 4.1-responsiveness mobile classes */
 @media (min-width: 320px) and (max-width: 767px) { 
-
+.desktop-broth-selection{
+    display: none;
+}
 
 .cover{
         display: flex;
@@ -404,6 +499,7 @@ p{
     align-items: center;
     text-align: center;
     background-color:var(--color-white);
+    height: 50vh;
 }
 
 .carousel-img{
@@ -479,6 +575,8 @@ background-size: 300px 300px;
 .primary-btn {
     font-size: 10px;
     padding: 0.9em;
+    background-color: var(--color-blue);
+    justify-content: space-between;
 }
 
 .cover-desktop-text{
@@ -767,5 +865,7 @@ background-size: 300px 300px;
 .primary-btn{
     justify-content: center;
     gap: 15px;
+    background-color: var(--color-blue);
+    justify-content: space-between;
 }
 }

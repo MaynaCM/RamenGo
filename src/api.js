@@ -1,5 +1,7 @@
-import { getActiveBrothId } from "./brothCarousel";
-import { getActiveProteinId } from "./proteinCarousel";
+import { getActiveBrothId } from "./carousels/brothCarousel";
+import { getActiveProteinId } from "./carousels/proteinCarousel";
+import { getDesktopActiveBrothId } from "./pageUtils/cardsController";
+import { getDesktopActiveProteinId } from "./pageUtils/cardsController";
 
 export function getBroth() {
     var apiKey = '4676677e-8a89-4331-bc32-89ad03576a4a';
@@ -26,7 +28,6 @@ export function getProteins() {
         }
     })
     .then(function(response) {
-        console.log(response.data)
         return response.data;
     })
     .catch(function(error) {
@@ -35,13 +36,26 @@ export function getProteins() {
 }
 
 export function sendOrder() {
-    const activeBrothId = getActiveBrothId().replace(/\D/g, '');
-    const activeProteinId = getActiveProteinId().replace(/\D/g, '');
+    let activeBrothId = getActiveBrothId();
+    let activeProteinId = getActiveProteinId();
+
+    if (activeBrothId && activeProteinId) {
+        activeBrothId = activeBrothId.replace(/\D/g, '');
+        activeProteinId = activeProteinId.replace(/\D/g, '');
+    } else {
+        activeBrothId = getDesktopActiveBrothId();
+        activeProteinId = getDesktopActiveProteinId();
+
+        if (activeBrothId && activeProteinId) {
+            activeBrothId = activeBrothId.replace(/\D/g, '');
+            activeProteinId = activeProteinId.replace(/\D/g, '');
+        }
+    }
 
     if (activeBrothId && activeProteinId) {
         return axios.post('https://ramengo-backend.onrender.com/orders', 
             { brothId: activeBrothId, proteinId: activeProteinId },
-            { headers: { 'x-api-key': '4676677e-8a89-4331-bc32-89ad03576a4a'}}
+            { headers: { 'x-api-key': '4676677e-8a89-4331-bc32-89ad03576a4a' }}
         )
         .then(function(response) {
             console.log('IDs enviados com sucesso:', response.data);

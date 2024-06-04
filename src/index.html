@@ -16,7 +16,7 @@
                 <p class="cover-desktop-text">Enjoy a good ramen in the comfort of your house. Create your own ramen and choose your favorite flavour combination!</p>
                 <button class="primary-btn" id="cover-btn">
                     Order now
-                    <img src="../assets/icon.svg" id="icon-btn">
+                    <img src="../assets/icon-yellow.png" id="icon-btn">
                 </button>
             </div>
             <!--Mobile cover text-->
@@ -27,50 +27,84 @@
         </div>
 
         <div class="content-div">
-            <div class="broth-section">
-                <h2>
-                    First things first: select your favorite broth.
-                </h2>
-                <p>
-                    It will give the whole flavor on your ramen soup. 
-                </p>
-                <!--Mobile Broth selection-->
-                <div class="carousel">
-                    <div class="slides">
-                        <div class="slide-out">
-                            <div class="slide" id="salt-1">
-                                <img src="" class="carousel-img" alt="Slide 1">
-                                <h3 id="broth-title"></h3>
-                                <p id="broth-description"></p>
-                                <p id="broth-price"></p>
+            <!--mobile broth selection-->
+                <div class="broth-section">
+                    <h2>
+                        First things first: select your favorite broth.
+                    </h2>
+                    <p>
+                        It will give the whole flavor on your ramen soup. 
+                    </p>
+                    <!--Mobile Broth selection-->
+                    <div class="carousel">
+                        <div class="slides">
+                            <div class="slide-out">
+                                <div class="slide" id="salt-1">
+                                    <img src="" class="carousel-img" alt="Slide 1">
+                                    <h3 id="broth-title"></h3>
+                                    <p id="broth-description"></p>
+                                    <p id="broth-price"></p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="slide-out">
-                            <div class="slide" id="shoyu-2">
-                                <img src="" class="carousel-img" alt="Slide 2">
-                                <h3 id="broth-title"></h3>
-                                <p id="broth-description"></p>
-                                <p id="broth-price"></p>
+                            <div class="slide-out">
+                                <div class="slide" id="shoyu-2">
+                                    <img src="" class="carousel-img" alt="Slide 2">
+                                    <h3 id="broth-title"></h3>
+                                    <p id="broth-description"></p>
+                                    <p id="broth-price"></p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="slide-out">
-                            <div class="slide" id="miso-3">
-                                <img src="" class="carousel-img" alt="Slide 3">
-                                <h3 id="broth-title"></h3>
-                                <p id="broth-description"></p>
-                                <p id="broth-price"></p>
+                            <div class="slide-out">
+                                <div class="slide" id="miso-3">
+                                    <img src="" class="carousel-img" alt="Slide 3">
+                                    <h3 id="broth-title"></h3>
+                                    <p id="broth-description"></p>
+                                    <p id="broth-price"></p>
+                                </div>
                             </div>
                         </div>
 
-                    </div>
-
-                    <div class="indicators">
-                        <div class="indicator active" data-index="0"></div>
-                        <div class="indicator" data-index="1"></div>
-                        <div class="indicator" data-index="2"></div>
+                        <div class="indicators">
+                            <div class="indicator active" data-index="0"></div>
+                            <div class="indicator" data-index="1"></div>
+                            <div class="indicator" data-index="2"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            <!--End mobile Broth selection-->
+
+                <!-- Desktop broth selection-->
+                <div class="desktop-broth-selection">
+                    <div class="broth-cards">
+                        <div class="broth-card-out">
+                            <div class="broth-card" id="salt-1">
+                                <img src="" class="card-img" alt="broth-card 1">
+                                <h3 id="broth-title"></h3>
+                                <p id="broth-description"></p>
+                                <p id="broth-price"></p>
+                            </div>
+                        </div>
+                        <div class="broth-card-out">
+                            <div class="broth-card" id="shoyu-2">
+                                <img src="" class="card-img" alt="broth-card 2">
+                                <h3 id="broth-title"></h3>
+                                <p id="broth-description"></p>
+                                <p id="broth-price"></p>
+                            </div>
+                        </div>
+                        <div class="broth-card-out">
+                            <div class="broth-card" id="miso-3">
+                                <img src="" class="card-img" alt="broth-card 3">
+                                <h3 id="broth-title"></h3>
+                                <p id="broth-description"></p>
+                                <p id="broth-price"></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            <!--Protein Section-->
             <div class="protein-section">
                 <h2>
                     It's time to choose (or not) your meat!                
@@ -78,7 +112,7 @@
                 <p>
                     Some people love, some don't. We have options for all tastes.                
                 </p>
-                <!--Mobile Protein selection-->
+                <!--Mobile carousel Protein selection-->
                 <div class="protein-carousel">
                     <div class="protein-slides">
                         <div class="protein-slide-out">
@@ -98,7 +132,7 @@
                             </div>
                         </div>
                         <div class="protein-slide-out">
-                            <div class="protein-slide" id="karaague-2">
+                            <div class="protein-slide" id="karaague-3">
                                 <img src="" class="carousel-img" alt="Slide 3">
                                 <h3 id="protein-title"></h3>
                                 <p id="protein-description"></p>
@@ -114,6 +148,37 @@
                         <div class="protein-indicator" data-index="2"></div>
                     </div>
                 </div>
+                <!--End Mobile carousel Protein selection-->
+
+                <!-- Desktop protein selection-->
+                <div class="desktop-protein-selection">
+                    <div class="protein-cards">
+                        <div class="protein-card-out">
+                            <div class="protein-card" id="chasu-1">
+                                <img src="" class="protein-card-img" alt="protein-card 1">
+                                <h3 id="protein-title"></h3>
+                                <p id="protein-description"></p>
+                                <p id="protein-price"></p>
+                            </div>
+                        </div>
+                        <div class="protein-card-out">
+                            <div class="protein-card" id="yasai-2">
+                                <img src="" class="protein-card-img" alt="protein-card 2">
+                                <h3 id="protein-title"></h3>
+                                <p id="protein-description"></p>
+                                <p id="protein-price"></p>
+                            </div>
+                        </div>
+                        <div class="protein-card-out">
+                            <div class="protein-card" id="karaague-3">
+                                <img src="" class="protein-card-img" alt="protein-card 3">
+                                <h3 id="protein-title"></h3>
+                                <p id="protein-description"></p>
+                                <p id="protein-price"></p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
 
                 <div class="action-div">
                     <button id="send-order" class="primary-btn">
@@ -124,7 +189,6 @@
             </div>
         </div>
     </div>
-
 
     <div class="success-div" id="success-page">
         <div class="sucess-cover pattern-blue-bg">
@@ -148,7 +212,7 @@
     </div>
     <script src="../node_modules/axios/dist/axios.min.js"></script>
     <script src="../dist/bundle.js"></script>
-    <script src="./brothCarouselUtil.js"></script>
-    <script src="./proteinCarouselUtil.js"></script>
+    <script src="./carouselUtils/brothCarouselUtil.js"></script>
+    <script src="./carouselUtils/proteinCarouselUtil.js"></script>
 </body>
 </html>
