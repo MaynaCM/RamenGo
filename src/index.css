@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap');
+
+
+/* Style-Guide :) */
+/* 0- Root variables and root elements adjustments */
+/* 1-Fonts */
+/* 2-Colors classes */
+/* 3-Components and style classes */
+/* 3.1-DIV classes */
+/* 3.2-Widgets classes */
+/* 3.2.1-Protein carousel classes */
+/* 3.3-buttons classes */
+/* 3.4-Style classes (especific borders, positions or animations) */
+/* 4-responsiveness classes */
+/* 4.1-responsiveness mobile classes */
+/* 4.2-responsiveness tablet classes */
+/* 4.3-responsiveness desktop classes */
+
+
+/* 0- Root variables and root elements adjustments */
+:root {
+    --color-black: #000000;
+    --color-blue: #1820EF;
+    --color-red: #FF4E42;
+    --color-yellow: #FFC024;
+    --color-white: #FAFAED;
+}
+
+body {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+p{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+
+/* 1-Fonts */
+.font-black {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.font-extrabold {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.font-bold {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.font-medium {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.font-regular {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-light {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.font-thin {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* 3-Components and style classes */
+/* 3.1-DIV classes */
+.main{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.content-div{
+    background-color: var(--color-white);
+    padding: 2%;
+}
+
+.broth-section{
+    text-align: center;
+}
+
+.protein-section{
+    text-align: center;
+    margin-top: 10%;
+}
+
+.action-div{
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.success-div{
+    display: none;
+    overflow-x: hidden;
+    flex-direction: column;
+}
+
+.reorder-action-div{
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+/* 3.2-Widgets classes */
+#broth-title {
+    color: var(--color-blue);
+    font-weight: 900;
+}
+
+#broth-description {
+    color: #000000;
+    font-size: 14px;
+}
+
+#broth-price {
+    color: var(--color-red);
+    font-weight: 900;
+    font-size: 20px;
+    margin-top: 2em;
+}
+
+.carousel {
+    width: 100%; 
+    margin-top: 5%;
+    overflow: hidden; 
+    position: relative;
+    transition: transform 0.3s ease-in-out
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.slide-out {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center; 
+}
+
+.slide {
+    width: 65%; 
+    text-align: center; 
+    padding: 1rem; 
+    box-shadow: 0px 4px 12px 0px #E0DBBF99;
+    border-radius: 10px;
+}
+
+.indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.25rem; 
+    transition: transform 0.3s ease-in-out
+}
+
+.indicator {
+    cursor: pointer;
+    margin: 0 0.5rem; 
+    width: 10px;
+    height: 10px;
+    border-radius: 8px;
+    background-color: #E0DBBF;
+}
+
+.indicator.active {
+    background-color: var(--color-red);
+    width: 36px;
+    height: 12px; 
+}
+
+.slide.active{
+    background-color: #1820EF;
+}
+
+.slide.active > #broth-title{
+    color: white;
+}
+
+.slide.active > #broth-description{
+    color: white;
+}
+
+.slide.active > #broth-price{
+    color: var(--color-yellow);
+}
+
+/* 3.2.1-Protein carousel classes */
+#protein-title {
+    color: var(--color-blue);
+    font-weight: 900;
+}
+
+#protein-description {
+    color: #000000;
+    font-size: 14px;
+}
+
+#protein-price {
+    color: var(--color-red);
+    font-weight: 900;
+    font-size: 20px;
+    margin-top: 2em;
+}
+
+.protein-carousel {
+    width: 100%; 
+    margin-top: 5%;
+    overflow: hidden; 
+    position: relative;
+    transition: transform 0.3s ease-in-out
+}
+
+.protein-slides {
+    display: flex;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.protein-slide-out {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center; 
+}
+
+.protein-slide {
+    width: 65%; 
+    text-align: center; 
+    padding: 1rem; 
+    box-shadow: 0px 4px 12px 0px #E0DBBF99;
+    border-radius: 10px;
+}
+
+.protein-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.25rem; 
+    transition: transform 0.3s ease-in-out;
+}
+
+.protein-indicator {
+    cursor: pointer;
+    margin: 0 0.5rem; 
+    width: 10px;
+    height: 10px;
+    border-radius: 8px;
+    background-color: #E0DBBF;
+}
+
+.protein-indicator.active {
+    background-color: var(--color-red);
+    width: 36px;
+    height: 12px; 
+}
+
+.protein-slide.active{
+    background-color: #1820EF;
+}
+
+.protein-slide.active > #protein-title{
+    color: white;
+}
+
+.protein-slide.active > #protein-description{
+    color: white;
+}
+
+.protein-slide.active > #protein-price{
+    color: var(--color-yellow);
+}
+/* 3.3-buttons classes */
+.primary-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    background-color:#C5C5C5;
+    border: solid 0px transparent;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 8em;
+    padding: 1.2em;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+.primary-btn:hover{
+    background-color: var(--color-blue);
+}
+.primary-btn.active{
+    background-color: var(--color-blue);
+}
+
+.primary-btn.active > .icon-btn{
+    fill: var(--color-yellow);
+}
+/* 3.4-Style classes (especific borders, positions or animations) */
+.sucess-jpn-text{
+    color: var(--color-yellow);
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.sucess-main-text{
+    color: var(--color-red);
+    font-weight: 900;
+    font-size: 24px;
+    margin: 1em 0em 1em 0em;
+}
+
+.order-text-intro{
+    color: white;
+    font-weight: 900;
+}
+
+.order-success-text{
+    color: var(--color-yellow);
+    font-weight: 900;
+    font-size: 24px;
+}
+
+/* 4-responsiveness classes */
+/* 4.1-responsiveness mobile classes */
+@media (min-width: 320px) and (max-width: 767px) { 
+    .cover{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 4%;
+}
+.sucess-cover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10%;
+    text-align: center;
+}
+
+    .GO-text{
+        font-size: 100px;
+        color: white;
+}
+
+    .cover-text{
+        text-align: center;
+        font-size: 16px;
+        color: white;
+        padding-bottom: 2%;
+}
+
+    .pattern-bg {
+        height: auto; 
+        background-image: url('../assets/pattern-vermelha.png');
+        background-repeat: repeat;
+        background-size: 300px 300px;
+}
+
+    .cover-mobile{
+        width: 70%;
+}
+
+.sucess-content{
+    display: flex;
+    padding: 4%;
+    padding-top: 4em;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color:var(--color-white);
+}
+
+.pattern-blue-bg {
+    height: auto; 
+    background-image: url('../assets/pattern-azul.png');
+    background-repeat: repeat;
+    background-size: 300px 300px;
+}
+
+    .carousel-img{
+        width: 30%;
+}
+
+.ramen-img{
+    width: 100%;
+    position: static;
+}
+}
