@@ -164,7 +164,7 @@ p{
     height: 12px; 
 }
 
-.slide-out.active > .slide{
+.slide.active{
     background-color: #1820EF;
 }
 
