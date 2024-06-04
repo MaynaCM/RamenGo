@@ -340,12 +340,16 @@ p{
 /* 4-responsiveness classes */
 /* 4.1-responsiveness mobile classes */
 @media (min-width: 320px) and (max-width: 767px) { 
-    .cover{
+
+
+.cover{
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 4%;
+        position: relative;
 }
+
 .sucess-cover{
     display: flex;
     flex-direction: column;
@@ -354,27 +358,42 @@ p{
     text-align: center;
 }
 
-    .GO-text{
+.cover-mobile{
+    width: 55%;
+}
+
+.cover-desktop{
+    display: none;
+}
+
+.cover-mobile-text{
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    padding-bottom: 2%;
+}
+
+.desktop-cover-text{
+    display: none;
+}
+
+.GO-text{
         font-size: 100px;
         color: white;
 }
 
-    .cover-text{
-        text-align: center;
-        font-size: 16px;
-        color: white;
-        padding-bottom: 2%;
-}
-
-    .pattern-bg {
+.pattern-bg {
         height: auto; 
         background-image: url('../assets/pattern-vermelha.png');
         background-repeat: repeat;
         background-size: 300px 300px;
 }
 
-    .cover-mobile{
-        width: 70%;
+.pattern-blue-bg {
+    height: auto; 
+    background-image: url('../assets/pattern-azul.png');
+    background-repeat: repeat;
+    background-size: 300px 300px;
 }
 
 .sucess-content{
@@ -387,6 +406,140 @@ p{
     background-color:var(--color-white);
 }
 
+.carousel-img{
+        width: 30%;
+}
+
+.ramen-img{
+    width: 100%;
+    position: static;
+}
+}
+
+/* 4.2-responsiveness tablet classes */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+.cover{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2% 2% 6% 2%;  
+        position: relative;
+}
+
+.cover-mobile-text{
+    display: none;
+}
+
+.desktop-cover-text{
+    width: 20%;
+    position: absolute;
+    left: 27%;
+    top: 59%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.GO-text{
+    display: none;
+}
+.carousel{
+    display: none;
+}
+
+.protein-carousel {
+    display: none;
+}
+
+.cover-mobile{
+    display: none;
+}
+
+.cover-desktop{
+    width: 50%;
+}
+
+
+.pattern-bg {
+    height: auto; 
+    background-image: url('../assets/pattern-vermelha.png');
+    background-repeat: repeat;
+    background-size: 300px 300px;
+}
+
+.pattern-blue-bg {
+height: auto; 
+background-image: url('../assets/pattern-azul.png');
+background-repeat: repeat;
+background-size: 300px 300px;
+}
+
+.primary-btn {
+    font-size: 10px;
+    padding: 0.9em;
+}
+
+.cover-desktop-text{
+    font-size: 12px;
+    color: white;
+}
+}
+
+/* 4.3-responsiveness desktop classes */
+
+@media (min-width: 1024px) and (max-width: 1279px) { 
+
+.cover{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2% 2% 6% 2%;  
+        position: relative;
+}
+
+.cover-mobile-text{
+    display: none;
+}
+
+.desktop-cover-text{
+    width: 19%;
+    position: absolute;
+    left: 27%;
+    top: 59%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.GO-text{
+    display: none;
+}
+
+.carousel{
+        display: none;
+}
+
+.protein-carousel {
+        display: none;
+}
+
+.cover-mobile{
+        display: none;
+}
+
+.cover-desktop{
+    width: 50%;
+}
+
+.pattern-bg {
+        height: auto; 
+        background-image: url('../assets/pattern-vermelha.png');
+        background-repeat: repeat;
+        background-size: 300px 300px;
+}
+
 .pattern-blue-bg {
     height: auto; 
     background-image: url('../assets/pattern-azul.png');
@@ -394,12 +547,225 @@ p{
     background-size: 300px 300px;
 }
 
-    .carousel-img{
-        width: 30%;
+.cover-desktop-text{
+    color: white;
 }
 
-.ramen-img{
-    width: 100%;
-    position: static;
+.primary-btn {
+    font-size: 12px;
+    padding: 1em;
+    background-color: var(--color-blue);
+    justify-content: space-between;
+}
+
+}
+
+@media (min-width: 1280px) and (max-width: 1535px) { 
+
+.cover{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2% 2% 5% 2%;  
+        position: relative;
+}
+
+.desktop-cover-text{
+    width: 15%;
+    position: absolute;
+    left: 31%;
+    top: 58%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cover-mobile-text{
+    display: none;
+}
+
+.cover-desktop{
+    width: 40%;
+}
+
+.GO-text{
+    display: none;
+}
+
+.carousel{
+        display: none;
+}
+
+.protein-carousel {
+        display: none;
+}
+
+.cover-mobile{
+        display: none;
+}
+
+.pattern-bg {
+    height: auto; 
+    background-image: url('../assets/pattern-vermelha.png');
+    background-repeat: repeat;
+    background-size: 300px 300px;
+}
+
+.pattern-blue-bg {
+height: auto; 
+background-image: url('../assets/pattern-azul.png');
+background-repeat: repeat;
+background-size: 300px 300px;
+}
+
+.cover-desktop-text{
+    color: white;
+}
+
+.primary-btn {
+    font-size: 12px;
+    padding: 1em;
+    background-color: var(--color-blue);
+    justify-content: space-between;
+}
+
+}
+
+@media (min-width: 1536px) and (max-width: 2559px) { 
+
+.cover{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2% 2% 5% 2%;        
+        position: relative;
+}
+
+.desktop-cover-text{
+    width: 15%;
+    position: absolute;
+    left: 32%;
+    top: 58.5%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.carousel{
+        display: none;
+}
+
+.protein-carousel {
+        display: none;
+}
+
+
+.cover-mobile{
+        display: none;
+}
+
+.cover-desktop{
+    width: 38%;
+}
+
+
+.cover-mobile-text{
+    display: none;
+}
+
+.GO-text{
+    display: none;
+}
+
+
+.pattern-bg {
+    height: auto; 
+    background-image: url('../assets/pattern-vermelha.png');
+    background-repeat: repeat;
+    background-size: 300px 300px;
+}
+
+.pattern-blue-bg {
+height: auto; 
+background-image: url('../assets/pattern-azul.png');
+background-repeat: repeat;
+background-size: 300px 300px;
+}
+
+.cover-desktop-text{
+    color: white;
+}
+
+.primary-btn {
+    background-color: var(--color-blue);
+    justify-content: space-between;
+}
+}
+
+@media (min-width: 2560px) { 
+
+.carousel{
+        display: none;
+}
+
+.protein-carousel {
+        display: none;
+}
+
+.cover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2% 2% 3% 2%;  
+    position: relative;
+}
+
+.desktop-cover-text{
+width: 12%;
+position: absolute;
+left: 33.5%;
+top: 62%;
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+
+.cover-mobile{
+        display: none;
+}
+
+.cover-desktop{
+    width: 35%;
+}
+
+.cover-mobile-text{
+    display: none;
+}
+
+.GO-text{
+    display: none;
+}
+
+.pattern-bg {
+    height: auto; 
+    background-image: url('../assets/pattern-vermelha.png');
+    background-repeat: repeat;
+    background-size: 300px 300px;
+}
+
+.pattern-blue-bg {
+height: auto; 
+background-image: url('../assets/pattern-azul.png');
+background-repeat: repeat;
+background-size: 300px 300px;
+}
+
+.cover-desktop-text{
+    color: white;
+}
+
+.primary-btn{
+    justify-content: center;
+    gap: 15px;
 }
 }
